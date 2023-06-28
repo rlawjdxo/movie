@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="EU">
+
+	<!-- 회원가입 -->
+
+
+	<insert parameterType="eu" id="euJoin">
+	INSERT INTO EUSER VALUES
+	(#{euId},#{euPw},#{euName},#{euBirth},#{euGender},#{euEmail},#{euPhone},#{euAddr},#{euProfileName})
+	</insert>
+
+	<!-- 아이디 중복 체크 -->
+
+
+	<select parameterType="String" id="idCheck" resultType="String">
+	SELECT EUID FROM EUSER WHERE EUID =#{euId} </select>
+
+	<!-- 로그인(mPw값 가져오기 -->
+
+
+	<select parameterType="String" id="euLogin" resultType="String">
+	SELECT EUPW FROM EUSER WHERE EUID = #{euId} </select>
+
+	<!--회원목록 가져오기 -->
+
+
+	<select parameterType="paging" id="euList" resultType="eu">
+	SELECT*FROM EUSERLIST WHERE RN BETWEEN #{startRow} AND #{endRow} </select>
+
+	<!-- mCount : 전체 회원 수 -->
+
+
+	<select id="mCount" resultType="int">
+	SELECT COUNT(*) FROM EUSER
+	</select>
+
+	<!-- 게시글 상세보기 -->
+
+
+	<select parameterType="String" id="euView" resultType="eu">
+	SELECT*FROM EUSER WHERE EUID = #{euId} </select>
+
+	<!-- 게시글 수정 -->
+
+
+	<update parameterType="eu" id="modify">
+	UPDATE EUSER SET EUNAME=#{euName},
+	EUPW = #{euPw},
+	EUGENDER = #{euGender},
+	EUBIRTH =#{euBirth},
+	EUEMAIL = #{euEmail},
+	EUPHONE = #{euPhone},
+	EUADDR =#{euAddr},
+	EUPROFILENAME = #{euProfileName}
+	WHERE EUID = #{euId}
+	</update>
+
+	<!-- 게시글 삭제 -->
+
+
+	<delete parameterType="eu" id="euDelete">
+	DELETE FROM EUSER
+	WHERE EUID =#{euId} 
+	</delete>
+
+	<select id="euSearch" parameterType="search" resultType="eu">
+		SELECT * FROM EUSER WHERE ${category} LIKE '%${keyword}%'
+	</select>
+</mapper>

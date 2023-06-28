@@ -1,0 +1,427 @@
+
+table {
+	
+	width:60%;
+    border-top: 1px solid white;
+    border-collapse: collapse;
+    border-radius:5px;
+
+}
+
+
+  th, td {
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Arial, sans-serif;
+    
+  }
+  th:first-child, td:first-child {
+    border-left: none;
+  }
+  th{
+  background-color: gray;
+  border-radius:5px;
+  }
+  td{
+  
+  }
+  
+  select::-ms-expand {
+   display: none;
+   
+}
+/* reset */
+#b{
+color: black;
+}
+
+
+
+.table{
+	
+}
+
+
+.listbox{
+
+    width: 60%;
+    list-style: none;
+    background: #FFFFFF;
+    
+    box-sizing: border-box;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin-top: 9px;
+  
+    height: 40px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border: 1px solid #dddddd;
+    
+}
+.listbox2{
+
+    width: 41.5%;
+       list-style: none;
+    background: #FFFFFF;
+    
+    box-sizing: border-box;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin-top: 9px;
+  
+    height: 40px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border: 1px solid #dddddd;
+}
+
+.listbox1{
+
+    width: 10%;
+     list-style: none;
+    background: #FFFFFF;
+    
+    box-sizing: border-box;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin-top: 9px;
+  
+    height: 40px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border: 1px solid #dddddd;
+    
+}
+.listbox15{
+
+    width: 11%;
+     list-style: none;
+    background: #FFFFFF;
+    
+    box-sizing: border-box;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin-top: 9px;
+  
+    height: 40px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border: 1px solid #dddddd;
+    
+}
+.listbox4{
+
+    width: 92%;
+     list-style: none;
+    background: #FFFFFF;
+    
+    box-sizing: border-box;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin-top: 9px;
+  
+    height: 40px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border: 1px solid #dddddd;
+    
+}
+
+.list{
+    border: none;
+    background-color: #FFFFFF;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 7px 10px;
+    margin: 5px 7px;
+    box-sizing: border-box;
+    border-radius:5px;
+}
+
+.list:focus{
+    background: #F8E4FF;
+    width: 184px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: left;
+}
+.filebox .upload-name {
+	width: 41.5%;
+   list-style: none;
+    background: #FFFFFF;
+    
+    box-sizing: border-box;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin-top: 9px;
+  
+    height: 40px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border: 1px solid #dddddd;
+}
+.filebox label {
+	width : 17%;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    vertical-align: middle;
+    background-color: #999999;
+    cursor: pointer;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+    margin-top: 9px;
+}
+.filebox input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+
+}
+.filebox5 .upload-name5 {
+	width: 41.5%;
+   list-style: none;
+    background: #FFFFFF;
+    
+    box-sizing: border-box;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin-top: 9px;
+  
+    height: 40px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border: 1px solid #dddddd;
+}
+.filebox5 label {
+	width : 17%;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    vertical-align: middle;
+    background-color: #999999;
+    cursor: pointer;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+    margin-top: 9px;
+}
+.filebox5 input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+
+}
+.filebox2 .upload-name2 {
+	width: 41.5%;
+   list-style: none;
+    background: #FFFFFF;
+    
+    box-sizing: border-box;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin-top: 9px;
+  
+    height: 40px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border: 1px solid #dddddd;
+}
+.filebox2 label {
+	width : 17%;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    vertical-align: middle;
+    background-color: #999999;
+    cursor: pointer;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+    margin-top: 9px;
+}
+.filebox2 input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+
+}
+.filebox3 .upload-name3 {
+	width: 41.5%;
+   list-style: none;
+    background: #FFFFFF;
+    
+    box-sizing: border-box;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin-top: 9px;
+  
+    height: 40px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border: 1px solid #dddddd;
+}
+.filebox3 label {
+	width : 17%;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    vertical-align: middle;
+    background-color: #999999;
+    cursor: pointer;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+    margin-top: 9px;
+}
+.filebox3 input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+
+}
+.filebox4 .upload-name4 {
+	width: 41.5%;
+   list-style: none;
+    background: #FFFFFF;
+    
+    box-sizing: border-box;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin-top: 9px;
+  
+    height: 40px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border: 1px solid #dddddd;
+}
+.filebox4 label {
+	width : 17%;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    vertical-align: middle;
+    background-color: #999999;
+    cursor: pointer;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+    margin-top: 9px;
+}
+.filebox4 input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+
+}
+
+.listbox3{
+width : 17%;
+border : none;
+	 padding: 10px 20px;
+    color: #fff;
+    vertical-align: middle;
+    background-color: #999999;
+    cursor: pointer;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+    margin-top: 9px;
+}
+.select {
+    padding: 15px 10px;
+}
+.select input[type=radio]{
+    display: none;
+}
+.select input[type=radio]+label{
+    display: inline-block;
+    cursor: pointer;
+    height: 24px;
+    width: 90px;
+    border: 1px solid #333;
+    line-height: 24px;
+    text-align: center;
+    font-weight:bold;
+    font-size:13px;
+}
+.select input[type=radio]+label{
+    border: none;
+    color: #333;
+     vertical-align: middle;
+    background-color: #999999;
+    text-align : center;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+    margin-top: 9px;
+    line-height: 40px;
+}
+.select input[type=radio]:checked+label{
+    border: none;
+    color: #fff;
+    vertical-align: middle;
+    background-color: #999999;
+    text-align : center;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+    margin-top: 9px;
+}
+#button1{
+
+  
+  background-color:silver;
+  color: #fff;
+  border:none;
+  
+  
+    
+    box-sizing: border-box;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    
+  
+    height: 40px;
+    padding: 0 10px;
+   
+    border: 1px solid #dddddd;
+}

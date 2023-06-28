@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="TT">
+<delete parameterType="int" id="theaterDelete">
+DELETE FROM EMGMOVIE WHERE EMGCODE = #{emgCode} 
+</delete>
+
+<update parameterType="tt" id="theaterModify">
+UPDATE EMGMOVIE SET EMGCODE = #{emgCode}, EMGNAME=#{emgName}, EMADDR=#{emAddr},EMCOST=#{emCost}, EMSEAT=#{emSeat}, EMTRAFFIC=#{emTraffic}WHERE EMGCODE = #{emgCode} 
+</update>
+
+<select parameterType="int" id="theaterView" resultType="tt">
+SELECT * FROM EMGMOVIE WHERE EMGCODE = #{emgCode} 
+</select>
+
+<insert parameterType="tt" id="theaterSave">
+INSERT INTO EMGMOVIE VALUES(EMGMOVIE_SEQ.NEXTVAL, #{emgName}, #{emAddr}, #{emCost}, #{emSeat}, #{emTraffic}) 
+</insert>
+</mapper>

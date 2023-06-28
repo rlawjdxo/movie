@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="KK">
+	<insert parameterType="kk" id="emgtime">
+		INSERT INTO EMGMINFORMATION VALUES
+		(EMGMINFORMATION_SEQ.NEXTVAL,#{mCode},#{emgCode},#{emsDate},#{emsTime})
+	</insert>
+	<select id="tCount" resultType="int">
+		SELECT COUNT(*) FROM
+		EMGMINFORMATION
+	</select>
+	<select id="moivietimelist" parameterType="paging"
+		resultType="kk">
+		SELECT * FROM INFORMATIONLIST a ,EMOVIE b ,EMGMOVIE c  WHERE a.MCODE = b.MCODE AND c.EMGCODE=a.EMGCODE AND RN BETWEEN #{startRow}
+		AND #{endRow}
+	</select>
+	
+	<select id="tView" parameterType="int" resultType="kk">
+		SELECT * FROM
+		  EMGMINFORMATION a ,EMOVIE b ,EMGMOVIE c  WHERE a.MCODE = b.MCODE AND c.EMGCODE=a.EMGCODE AND EMSCODE  = #{emsCode}
+	</select>
+	
+	<update id="tkModify" parameterType="kk">
+		UPDATE EMGMINFORMATION SET MCODE=#{mCode},
+		EMGCODE=#{emgCode},
+		EMSDATE=#{emsDate},
+		EMSTIME=#{emsTime}
+		WHERE EMSCODE=#{emsCode}
+	</update>
+	
+	<delete id="tDelete" parameterType="kk">
+		DELETE FROM EMGMINFORMATION WHERE EMSCODE =#{emsCode}
+	</delete>
+	
+	<select id="emsSearch" parameterType="search" resultType="kk">
+		SELECT
+		* FROM EMGMINFORMATION WHERE ${category} LIKE '%${keyword}%'
+	</select>
+
+	
+
+
+
+<select resultType="rsv" parameterType="rsv" id="rsvId">	
+SELECT * FROM RESERVATION a ,EMOVIE b ,EMGMOVIE c, EMGMINFORMATION d WHERE c. EMGCODE=d.EMGCODE AND b.MCODE = d.MCODE AND b.MCODE = #{mCode} AND  a.EMSCODE=d.EMSCODE AND d.EMGCODE=#{emgCode} AND a.EUID=#{euId} ORDER BY RESERVEID DESC
+</select>
+
+<insert parameterType="rsv" id="rsvInsert">
+INSERT INTO RESERVATION VALUES(RESERVEID_SEQ.NEXTVAL, #{euId}, #{emsCode}) 
+</insert>
+
+<select resultType="int" parameterType="kk" id="reserve">
+SELECT EMSCODE FROM EMGMINFORMATION WHERE MCODE = #{mCode} AND EMGCODE = #{emgCode} AND EMSDATE = #{emsDate} AND EMSTIME = #{emsTime} 
+</select>
+
+<select resultType="String" parameterType="kk" id="timesearch">
+SELECT EMSTIME FROM EMGMINFORMATION WHERE MCODE = #{mCode} AND EMGCODE = #{emgCode} AND EMSDATE = #{emsDate} 
+</select>
+<select id="mCount" resultType="int">
+		SELECT COUNT(*) FROM RESERVATION
+</select>
+
+<select id="relist" parameterType="paging" resultType="rsv">
+		SELECT * FROM RESERVATIONLIST a ,EMOVIE b ,EMGMOVIE c, EMGMINFORMATION d 
+		WHERE
+		b.MCODE = d.MCODE AND a.EMSCODE=d.EMSCODE AND d.EMSCODE=a.EMSCODE AND
+		d.EMGCODE=c.EMGCODE AND RN BETWEEN #{startRow} AND #{endRow}
+</select>
+<select id="rsView" parameterType="int" resultType="rsv">
+		SELECT * FROM
+		 RESERVATION d, EMGMINFORMATION a ,EMOVIE b ,EMGMOVIE c  WHERE a.MCODE = b.MCODE AND c.EMGCODE=a.EMGCODE AND d.EMSCODE=a.EMSCODE AND d.RESERVEID  = #{reserveId}
+	</select>
+	<delete id="bDelete" parameterType="rsv">
+	DELETE FROM RESERVATION a,EUESR b WHERE a.EUID=b.EUID AND b.EUID =#{euId}
+	</delete>
+</mapper>

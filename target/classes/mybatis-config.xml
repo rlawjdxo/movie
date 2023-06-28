@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<typeAliases>
+		<typeAlias type="com.emg.movie.dto.euDTO" alias="eu" />
+		<typeAlias type="com.emg.movie.dto.emDTO" alias="em" />
+		<typeAlias type="com.emg.movie.dto.ePAGING" alias="paging" />
+		<typeAlias type="com.emg.movie.dto.TheaterDTO" alias="tt" />
+		<typeAlias type="com.emg.movie.dto.SEARCH" alias="search" />
+		<typeAlias type="com.emg.movie.dto.kDTO" alias="kk" />
+		<typeAlias type="com.emg.movie.dto.cmtMDTO" alias="comment" />
+		<typeAlias type="com.emg.movie.dto.reserveDTO" alias="rsv" />
+		
+
+
+	</typeAliases>
+
+</configuration>

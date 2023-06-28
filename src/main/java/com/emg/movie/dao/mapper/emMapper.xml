@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="EM">
+	<insert id="Moive" parameterType="em">
+		INSERT INTO EMOVIE
+		VALUES(EMOVIE_SEQ.NEXTVAL,
+		#{mPicture},#{mName},#{mCategory},#{mStory},#{mActors},#{mAge},#{msPicture1},#{msPicture2},#{msPicture3},#{msPicture4},#{mRtime},#{mDirector},#{mDate})
+	</insert>
+	<select id="mCount" resultType="int">
+		SELECT COUNT(*) FROM EMOVIE
+	</select>
+	<select id="movielist" parameterType="paging" resultType="em">
+		SELECT
+		* FROM MOVIELIST WHERE RN BETWEEN #{startRow} AND #{endRow}
+	</select>
+	<select id="mView" parameterType="int" resultType="em">
+		SELECT * FROM EMOVIE WHERE MCODE = #{mCode}
+	</select>
+	<delete id="delete" parameterType="em">
+	DELETE FROM EMOVIE WHERE MCODE =#{mCode}
+	</delete>
+	<update id="mModify" parameterType="em">
+			UPDATE EMOVIE SET MPICTURE =#{mPicture},
+								MNAME=#{mName},
+								MCATEGORY = #{mCategory},
+								MSTORY = #{mStory},
+								MACTORS = #{mActors},
+								MAGE = #{mAge},
+								MSPICTURE1 = #{msPicture1},
+								MSPICTURE2 = #{msPicture2},
+								MSPICTURE3 = #{msPicture3},
+								MSPICTURE4 = #{msPicture4},
+								MRTIME = #{mRtime},
+								MDIRECTOR = #{mDirector},
+								MDATE = #{mDate}
+								WHERE MCODE=#{mCode}
+	</update>
+	
+	<select id="searchList" parameterType="search" resultType="em">
+		SELECT * FROM EMOVIE WHERE ${category} LIKE '%${keyword}%'
+	</select>
+	
+	<delete id="cDelete" parameterType="comment">
+		DELETE FROM MOBIECOMMENT WHERE MNUM = #{mNum}
+	</delete>
+
+	<update id="cModify" parameterType="comment">
+		UPDATE MOBIECOMMENT SET MCCONTENT = #{mcContent} WHERE MNUM=#{mNum}
+	</update>
+	
+	<select id="cList" parameterType="int" resultType="comment">
+		SELECT * FROM MOBIECOMMENT WHERE MCODE = #{mCode} ORDER BY MNUM DESC
+	</select>
+	
+	<insert id="cWrite" parameterType="comment">
+		INSERT INTO MOBIECOMMENT VALUES(MNUM_SEQ.NEXTVAL, #{euId}, #{mCode}, #{mcContent}, SYSDATE)
+	</insert>
+	<select id="mList" resultType="em">
+	SELECT * FROM EMOVIE
+	
+	</select>
+
+	
+</mapper>
